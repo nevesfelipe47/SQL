@@ -40,3 +40,29 @@ SELECT SubStr (SALARIO, Length(SALARIO),1) FROM TALUNO;
 
 
 SELECT  SubStr (NOME,Length(NOME)-1,2)FROM TALUNO; -- TROUXE OS ULTIMOS CARACTERES DO CAMPO NOME--
+
+
+
+SELECT * FROM taluno
+WHERE Lower (nome) = 'felipe';
+
+
+SELECT * FROM taluno
+WHERE upper (nome) = 'FELIPE';
+
+
+SELECT * FROM taluno
+WHERE Upper(SubStr (cidade,1,3)) = 'OLI';
+
+UPDATE taluno SET
+salario = 633.47
+WHERE cod_aluno =1;
+
+
+SELECT
+SALARIO,
+REPLACE (SALARIO,',',''),
+RPad (SALARIO, 10,'0'),
+LPad (SALARIO, 10,'0'),
+LPad (REPLACE(SALARIO,',',''),10,'0')
+FROM TALUNO;
