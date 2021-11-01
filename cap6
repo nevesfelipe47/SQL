@@ -24,3 +24,19 @@ SELECT Lower ('Felipe Santos das Neves') FROM dual;
 
                              -- ACRECENTA CARACTERES A ESQUERDA ---
 SELECT COD_ALUNO, LPad(COD_ALUNO,5,'0') FROM TALUNO;
+SELECT COD_ALUNO, RPad(COD_ALUNO,5,'0') FROM TALUNO;
+
+SELECT cod_aluno, InitCap (nome), salario, RPad(salario,8,'0,0') FROM TALUNO;
+
+
+-- COPIA PARTE DE UM TEXTO ---
+SELECT  NOME , SubStr (NOME,1,1) FROM TALUNO;
+
+ --- SUBSTR (CAMPO / TEXTO , POSIÇÃO , QTD DE CARACTER)
+     ------------------------------------------------------
+ SELECT REPLACE ( NOME ,'R', '$') FROM TALUNO;
+
+SELECT SubStr (SALARIO, Length(SALARIO),1) FROM TALUNO;
+
+
+SELECT  SubStr (NOME,Length(NOME)-1,2)FROM TALUNO; -- TROUXE OS ULTIMOS CARACTERES DO CAMPO NOME--
