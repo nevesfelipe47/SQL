@@ -1,0 +1,25 @@
+SELECT cod_aluno , nome,cidade
+FROM taluno;
+
+
+SELECT cod_aluno AS "Código", nome AS "Nome do aluno"
+FROM taluno;
+
+SELECT DISTINCT cidade FROM taluno;
+
+
+
+
+INSERT
+
+
+INSERT INTO TALUNO (COD_ALUNO, NOME, CIDADE , CEP)
+VALUES (SEQ_ALUNO.NEXTVAL,'Antonio','PETROLINA','45613216');
+
+UPDATE  TALUNO SET
+              NOME='ANTONIO'
+ WHERE COD_ALUNO=24;
+
+
+SELECT * FROM TALUNO
+ORDER BY COD_ALUNO;
