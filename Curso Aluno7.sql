@@ -32,8 +32,30 @@ SELECT * FROM TCONTRATO;
         ESTADO = 'AC'
         WHERE COD_ALUNO=2;
 
+        UPDATE TALUNO SET
+        ESTADO ='SC'
+        WHERE COD_ALUNO= 4;
+
+
+        UPDATE TALUNO SET
+        ESTADO ='RJ'
+        WHERE COD_ALUNO= 5;
+
         SELECT * FROM TALUNO
         WHERE COD_ALUNO=2;
 
+        SELECT * FROM TALUNO
+        ORDER BY COD_ALUNO ASC  ;
+
+
+        -- CASE ---
+        SELECT NOME,ESTADO,
+        CASE
+        WHEN ESTADO = 'RS' THEN 'GAUCHO'
+        WHEN ESTADO = 'AC' THEN 'ACREANO'
+        WHEN ESTADO = 'RJ' AND SALARIO >500 THEN 'CARIOCA'
+        ELSE 'OUTROS'
+        END AS APELIDO
+        FROM TALUNO;
         SELECT nome ||' '|| sobrenome AS NOME_COMPLETO FROM taluno;
 
