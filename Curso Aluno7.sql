@@ -1,4 +1,7 @@
 
+
+SELECT * FROM TCONTRATO;
+
 --- NVL E NVL2 -- -
   SELECT TOTAL,
         DESCONTO,
@@ -16,3 +19,14 @@
 
         SELECT COD_ALUNO, Nvl (NOME, 'SEM NOME')
         FROM TALUNO;
+
+        SELECT * FROM TALUNO;
+
+        UPDATE TALUNO SET
+        ESTADO = 'AC'
+        WHERE COD_ALUNO=2;
+
+        SELECT * FROM TALUNO
+        WHERE COD_ALUNO=2;
+
+        SELECT nome ||' '|| sobrenome AS NOME_COMPLETO FROM taluno;
