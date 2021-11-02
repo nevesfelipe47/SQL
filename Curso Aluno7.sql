@@ -6,7 +6,13 @@
         Nvl(DESCONTO,0),
         Nvl(DESCONTO,0) +TOTAL,
         Nvl2 (DESCONTO, TOTAL,-1)
-        FROM TCONTRATO;
+  FROM TCONTRATO;
 
 
-        UPDATE TALUNO SET NOME = NULL WHERE COD_ALUNO = 5;
+        UPDATE TALUNO SET NOME = NULL WHERE
+        COD_ALUNO = 5;
+
+        SELECT  * FROM TALUNO;
+
+        SELECT COD_ALUNO, Nvl (NOME, 'SEM NOME')
+        FROM TALUNO;
