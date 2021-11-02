@@ -115,10 +115,39 @@ SELECT Next_Day(SYSDATE, 'Wednesday') AS PROXIMA_TERCA_DATA FROM DUAL; --- tive 
 SELECT Last_Day(SYSDATE) AS ULTIMO_DIA_MES FROM DUAL;
 
 
+---- primeiro dia do proximo mes
+---- ate dia 15 do mes pega o primeiro dia do mes atual
+---- a partir do dia 16 retorna o primeiro dia do proximo mes
+
 SELECT  Round (SYSDATE, 'MONTH') AS PRIMEIRO_DIA_PROXIMO_MES FROM DUAL;
 
+--- primeiro dia do mes
 
 SELECT  TRUNC(SYSDATE,'MONTH') AS PRIMEIRO_DIA_MES_CORRENTE FROM DUAL;
+
+
+--- FORMATAÇÃO DE DATA ---
+ SELECT To_Char(SYSDATE,'DD/MM/YYYY')DATA FROM DUAL; -- DATA COMPLETA SEM HORA
+
+ SELECT To_Char (SYSDATE, 'DD/MM') DIA_MES FROM DUAL;-- DIA E MES SEM HORA
+
+ SELECT To_Char (SYSDATE, 'DD') DIA FROM DUAL; -- DIA
+
+ SELECT To_Char ( SYSDATE, 'MM') MES FROM DUAL;-- MES
+
+ SELECT To_Char (SYSDATE, 'YY') ANO FROM DUAL; -- ANO
+
+
+SELECT
+CASE
+WHEN To_Char (SYSDATE, 'DO') > 16 THEN Round (SYSDATE,'MONTH')
+ELSE Round(Add_Months(SYSDATE,1),'MONTH')
+END AS pri_dia_prox_mes
+FROM DUAL;
+
+
+
+
 
 
 
