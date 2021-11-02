@@ -1,5 +1,5 @@
 
-
+--- NVL E NVL2 -- -
   SELECT TOTAL,
         DESCONTO,
         DESCONTO+TOTAL,
@@ -7,3 +7,6 @@
         Nvl(DESCONTO,0) +TOTAL,
         Nvl2 (DESCONTO, TOTAL,-1)
         FROM TCONTRATO;
+
+
+        UPDATE TALUNO SET NOME = NULL WHERE COD_ALUNO = 5;
