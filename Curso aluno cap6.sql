@@ -74,6 +74,8 @@
                             FROM tcontrato;
                   ------------------------------------------
 
+
+
                   ------ total de contrato por estado
                   SELECT alu.estado,
                   Sum(con.total) total, Count(*) qtd
