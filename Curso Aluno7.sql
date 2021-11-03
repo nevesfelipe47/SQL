@@ -67,6 +67,19 @@ SELECT * FROM TCONTRATO;
         END AS APELIDO
         FROM TALUNO;
 
+             -----------
+        SELECT SYSDATE AS DATA FROM DUAL
+
+        -----------
+
+        SELECT NOME, ESTADO,
+         Decode(ESTADO, 'RS', 'GAUCHO',
+                        'AC', 'ACREANO',
+                        'SP', 'PAULISTA',
+                        'PE', 'PERNAMBUCANO',
+                              'OUTROS') AS APELIDO
+                              FROM TALUNO;
+
 
         SELECT nome ||' '|| sobrenome AS NOME_COMPLETO FROM taluno;
 
