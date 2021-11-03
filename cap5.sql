@@ -116,9 +116,37 @@ FROM TALUNO ALU, TCONTRATO CON,
         AND A.ID_UNID_INTER = C.ID_UNID_INTER (+)
         AND Lower(B.NM_BAIRRO) LIKE '%'
 
-        ORDER BY NOME_PACIENTE asc;
+        ORDER BY B.NOME_PACIENTE asc;
 
-        UPDATE
+        SELECT * FROM TDESCONTO;
+
+                       CREATE TABLE TDESCONTO
+                       (CLASSE VARCHAR2(1) PRIMARY KEY,
+                       INFERIOR NUMBER (4,2),
+                       SUPERIOR NUMBER (4,2)
+                       );
+
+                       INSERT INTO  TDESCONTO VALUES ('A',00,10);
+
+                       INSERT INTO  TDESCONTO VALUES ('B',11,15);
+
+                       INSERT INTO  TDESCONTO VALUES ('C',16,20);
+
+                       INSERT INTO  TDESCONTO VALUES ('D',21,25);
+
+                       INSERT INTO  TDESCONTO VALUES ('E',26,30);
 
 
+                     -------------------
+        SELECT CON.COD_CONTRATO AS CONTRATO,CON.COD_CONTRATO, CON.DESCONTO,
+          DES.CLASSE AS DESCONTO
+
+          FROM TCONTRATO CON, TDESCONTO DES,
+          WHERE CON.DESCONTO BETWEEN DES.INFERIOR
+          AND DES.SUPERIOR
+          AND  CON.COD_CONTRATO
+
+          ORDER BY CON.COD_CONTRATO ;
+
+                              SELECT * FROM TCONTRATO;
 
