@@ -49,8 +49,6 @@
       SELECT Count (desconto)
       FROM tcontrato;
 
-
-
       ---- qtd de registros com estado informado
 
       SELECT Count(estado) FROM taluno;
