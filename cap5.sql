@@ -187,8 +187,36 @@ FROM TALUNO ALU, TCONTRATO CON,
          FROM TCURSO COD_CURSO,TCURSO CURSO, TCURSO PRE_REQ
          WHERE CURSO.PRE_REQ = PRE_REQ.COD_CURSO
 
+      --------------Total de contratos  por estado---
 
+      SELECT alu.estado,
+      Sum(con.total) total, Count(*) qtd
+
+      FROM taluno alu, tcontrato con
+      WHERE alu.cod_aluno = con.cod_aluno
+      GROUP BY alu.estado
+      ORDER BY alu.estado
+
+
+      ----------- Having -- filtrar coluna com função de grupo--------
+
+
+      SELECT cod_aluno, Avg(total) media
+      FROM tcontrato
+      WHERE cod_aluno >0
+      HAVING Avg (total) > 500 GROUP BY cod_aluno
+      ORDER BY cod_aluno
+      -----------------
          SELECT * FROM TCURSO;
+  ------------------------------------
+      SELECT Trunc(data)AS data, Sum(total)  total
+      FROM tcontrato
+      WHERE cod_contrato > 0
+      GROUP BY Trunc(data)
+      HAVING Sum(total) > 500
+      ORDER BY total DESC;
+
+      ---------------------------------------
 
                               SELECT * FROM TCONTRATO;
 
