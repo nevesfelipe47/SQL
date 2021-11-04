@@ -218,5 +218,25 @@ FROM TALUNO ALU, TCONTRATO CON,
 
       ---------------------------------------
 
+      --------------total de contrato por estado ---
+      select alu.estado,
+      Sum (con.total) total, Count(*) qtd
+
+      FROM taluno alu, tcontrato con
+      WHERE alu.cod_aluno = con.cod_aluno
+      GROUP BY alu.estado
+      ORDER BY alu.estado;
+
+      ---- media mais alta por aluno
+      SELECT Max(Avg(total)) AS media_alta
+      FROM tcontrato
+      GROUP BY cod_aluno;
+
+
+      --- SOMA DOS SALARIOS POR ESTADO
+      SELECT ESTADO, Sum(SALARIO) AS TOTAL
+      FROM TALUNO
+      GROUP BY ESTADO
+      ORDER BY 2 DESC;
                               SELECT * FROM TCONTRATO;
 
