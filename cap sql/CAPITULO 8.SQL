@@ -62,3 +62,8 @@ VALUES ('&cla', &inf,&sup);
 
 SELECT * FROM tdesconto;
 
+ROLLBACK TO SAVEPOINT ins_ok;
+ROLLBACK TO SAVEPOINT upd_b;
+
+DROP TABLE tdesconto2;
+
