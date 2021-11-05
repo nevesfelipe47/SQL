@@ -67,3 +67,17 @@ ROLLBACK TO SAVEPOINT upd_b;
 
 DROP TABLE tdesconto2;
 
+                      ALTER TABLE TEDESCONTOS
+
+                      CLASSE VARCHAR2(2) NOT NULL;
+
+                      DROP TABLE tdescontos;
+CREATE TABLE TDESCONTOS
+  (    CLASSE VARCHAR2(2) NOT NULL,
+        BASE_INFERIOR NUMBER (7,2),
+        BASE_SUPERIOR NUMBER (7,2));
+
+        DESCRIBE TDESCONTOS;
+
+
+
