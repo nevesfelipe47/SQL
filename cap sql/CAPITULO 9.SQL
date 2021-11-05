@@ -4,6 +4,10 @@
  );
       INSERT INTO TESTE (CODIGO)VALUES (1);
 
-      INSERT INTO TESTE (CODIGO,DATA) VALUES ( 2, '03/08/2013');
+      INSERT INTO TESTE (CODIGO,DATA) VALUES ( 2, '03/NOV/2021');
+
+                                               INSERT INTO TESTE (CODIGO,DATA) VALUES ( 3, '03/nov/2013');
+
+      select * from nls_session_parameters;
 
   SELECT * FROM TESTE;
