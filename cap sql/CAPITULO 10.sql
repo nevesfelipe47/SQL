@@ -123,6 +123,9 @@
 
 
 
+   --Se alterar o valor da coluna id da Cidade, também será alterado o valor da coluna
+   --Cidade_id na tabela de Cliente. Se excluir a cidade São Paulo, também será excluido o Cliente 1, Fulano.
+
    INSERT INTO TPESSOA VALUES (1,'C','MARCIO', 'F', 1,'1234');
 
    INSERT INTO TPESSOA VALUES (2,'C','BEATRIZ', 'F', 1,'123');
@@ -132,4 +135,16 @@
    INSERT INTO TPESSOA VALUES (4,'F','MARIA', 'J', 3, '1239');
 
    SELECT * FROM TPESSOA;
+
+
+   --- -- CHECK
+   ALTER TABLE TCONTRATO
+   ADD CONSTRAINT CL_CONTRATO_DESCONTO
+   CHECK(DESCONTO BETWEEN 0 AND 30);
+
+   SELECT * FROM TCONTRATO;
+
+
+
+
 
