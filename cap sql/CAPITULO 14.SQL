@@ -48,7 +48,7 @@
  Dbms_Output.PUT_LINE('VERDADEIRO');
   ELSE --SE NAO
   Dbms_Output.pUT_LINE('FALSO');
-  END IF -- FIM DO IF
+  END IF; -- FIM DO IF
     --
   IF (VPRECO1>VPRECO2) THEN
   Dbms_Output.PUT_LINE('VPRECO1 É MAIOR');
