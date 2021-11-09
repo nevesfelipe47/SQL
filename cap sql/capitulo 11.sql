@@ -156,3 +156,6 @@ AS
       VALUES (3,'MARIO','CARUARU','5646');
 
     INSERT INTO    taluno
+
+
+    SELECT 'ALO MUNDO / HELLO WORLD ' FROM DUAL;
