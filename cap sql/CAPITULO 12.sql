@@ -35,3 +35,9 @@
   DROP SEQUENCE SEQ_ALUNO1;
 
 
+  ------------------------------
+  ---- INDICES SECUNDARIOS
+  SELECT NOME FROM TALUNO
+  WHERE NOME LIKE '%A%';
+
+
