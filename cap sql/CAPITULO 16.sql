@@ -44,4 +44,56 @@
       Dbms_Output.PUT_LINE('APELIDO:  '||VNOME);
   END;
 
+  ---
+  --- LAÇO DE REPETIÇÃO
+  --
+
+  DECLARE
+    VCONTADOR  INTEGER :=5;
+  BEGIN
+    LOOP
+       VCONTADOR:= VCONTADOR +1;
+       Dbms_Output.PUT_LINE(VCONTADOR);
+       EXIT WHEN VCONTADOR = 10;
+    END LOOP;
+    Dbms_Output.PUT_LINE('FIM DO LOOP');
+  END;
+
+
+
 -----
+
+---
+--- whlie loop
+---
+
+  DECLARE
+    VCONTADOR INTEGER :=0;
+    VTEXTO VARCHAR2(10);
+  BEGIN
+    WHILE VCONTADOR < 10
+    LOOP
+     VCONTADOR := VCONTADOR+1;
+    IF (VCONTADOR Mod 2) = 0 THEN
+      VTEXTO := 'PAR';
+    ELSE
+      VTEXTO :='IMPAR';
+    END IF;
+
+    Dbms_Output.PUT_LINE(VCONTADOR||'  ->  '||VTEXTO);
+  END LOOP;
+  END;
+
+
+  --- FOR LOOP - > MAIS INDICADO PARA LAÇOS EM TABELAS
+
+  DECLARE
+  VCONTADOR INTERGER
+  BEGIN
+  FOR VCONTADOR IN 1..10
+  LOOP
+  --VCONTADOR := VCONTADOR  +1;
+  Dbms_Output.PUT_LINE('FOR LOOP:  '||VCONTADOR);
+  --EXITE WHEN VCONTADOR = 5;
+  END LOOP;
+  END;
